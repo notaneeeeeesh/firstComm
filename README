@@ -1,0 +1,3 @@
+Requirements: pytorch, ultralytics, (some other stuff if not included)
+Use testWhole.py, put pictures into testPictures folder.
+Enjoy.
