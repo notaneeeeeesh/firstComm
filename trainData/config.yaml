@@ -1,0 +1,8 @@
+train: ../images/train
+val: ../images/val
+test: ../images/test
+path: C:/Main/study stuff hmmmm/firstComm/trainData/data
+
+nc: 1
+
+names: ['license']
