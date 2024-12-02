@@ -64,7 +64,7 @@ class RRDBNet(nn.Module):
         self.HRconv = nn.Conv2d(nf, nf, 3, 1, 1, bias=True)
         self.conv_last = nn.Conv2d(nf, out_nc, 3, 1, 1, bias=True)
 
-        self.lrelu = nn.LeakyReLU(negative_slope=0.2, inplace=True)
+        self.lrelu = nn.LeakyReLU(negative_slope=0.45, inplace=True)
 
     def forward(self, x):
         fea = self.conv_first(x)

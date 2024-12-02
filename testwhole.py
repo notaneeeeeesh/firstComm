@@ -5,13 +5,13 @@ import torch
 import models.RRDBNet_arch as arch
 import easyocr
 
-#LP Extraction
 upscalerModel_path = 'models/RRDB_ESRGAN_x4.pth'
 licensePlateDetector = YOLO('models/LP.pt')
 imagePath = "./testPictures/img9.png"
+
+#LP Extraction
 results = licensePlateDetector([imagePath])  
-result = results[0]
- 
+result = results[0] 
 cv2.imshow('Original Image', cv2.imread(imagePath, cv2.IMREAD_COLOR))
 cv2.waitKey(0)
 cv2.destroyAllWindows()
