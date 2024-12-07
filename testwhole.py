@@ -5,9 +5,10 @@ import torch
 import models.RRDBNet_arch as arch
 import easyocr
 
+
 upscalerModel_path = 'models/RRDB_ESRGAN_x4.pth'
 licensePlateDetector = YOLO('models/LP.pt')
-imagePath = "./testPictures/img9.png"
+imagePath = "./testPictures/img8.png"
 
 #LP Extraction
 results = licensePlateDetector([imagePath])  
@@ -58,5 +59,4 @@ for (bbox, text, prob) in result:
     print(f'Raw LP Text: {text}, Probability: {prob}')
 result = reader.readtext('./resultingPictures/plate.png')  
 for (bbox, text, prob) in result:
-    print(f'Upscaled LP Text: {text}, Probability: {prob}')
-  
+    print(f'Upscaled LP Text: {text}, Probability: {prob}') 

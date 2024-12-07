@@ -48,7 +48,7 @@ class RRDB(nn.Module):
         out = self.RDB2(out)
         out = self.RDB3(out)
         return out * 0.2 + x
-
+    
 
 class RRDBNet(nn.Module):
     def __init__(self, in_nc, out_nc, nf, nb, gc=32):
@@ -64,7 +64,7 @@ class RRDBNet(nn.Module):
         self.HRconv = nn.Conv2d(nf, nf, 3, 1, 1, bias=True)
         self.conv_last = nn.Conv2d(nf, out_nc, 3, 1, 1, bias=True)
 
-        self.lrelu = nn.LeakyReLU(negative_slope=0.45, inplace=True)
+        self.lrelu = nn.LeakyReLU(negative_slope=0.2, inplace=True)
 
     def forward(self, x):
         fea = self.conv_first(x)
